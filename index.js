@@ -61,12 +61,12 @@ const employeeQuestions = [
         message: 'What is their last name?'
     },
     {
-        name: 'employeeRole',
+        name: 'role',
         type: 'input',
         message: "What is the employee's role?"
     },
     {
-        name: 'employeeManager',
+        name: 'manager',
         type: 'input',
         message: "Please input the employee's manager"
     }
@@ -155,10 +155,18 @@ const addEmployee = ()=>{
         {
             firstName: answers.firstName,
             lastName: answers.lastName,
+            role: answers.role,
+            manager: answers.manager
             // for ID's maybe I need an if else? If answers.employeeRole === manager || Manager then give appropriate ID
             // role_id:
             // manager_id:
+        },
+        (err, res)=>{
+            if (err) throw (err);
+            console.log(`${res.affectedRows} employee inserted!\n`);
+            startQuestions();
         }
+
         )
     })
 }
