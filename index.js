@@ -23,7 +23,7 @@ const menuQuestions = [
         name: 'menu',
         type: 'list',
         message: 'What would you like to do?',
-        choices: ['Add employee', 'Add role', 'Add department', 'View employee table', 'View role table', 'View department table', 'Update employee role', 'EXIT']
+        choices: ['Add employee', 'Add role', 'Add department', 'View employee table', 'View role table', 'View department table', 'EXIT']
     }
 ];
 
@@ -95,9 +95,9 @@ const startQuestions = ()=>{
             case 'View department table':
                 viewDepartment();
                 break;
-            case 'Update employee role':
+           // case 'Update employee role':
                 //call back add employee function
-                break;
+              //  break;
             case 'EXIT':
                 connection.end();
                 break;
